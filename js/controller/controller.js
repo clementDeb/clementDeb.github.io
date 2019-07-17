@@ -1,4 +1,4 @@
-import boardView from './js/view/boardView.js';
+import boardView from '../view/boardView';
 
 const routes = {
     '/board' : boardView,
@@ -17,6 +17,6 @@ const router = async () => {
     await page.addScript();
 
 };
-
+console.log('in controller.js');
 window.addEventListener('hashchange', router);
 window.addEventListener('load', router);
