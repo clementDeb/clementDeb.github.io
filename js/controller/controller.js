@@ -1,4 +1,5 @@
-import boardView from '../view/boardView';
+import boardView from '../view/boardView.js';
+import mainView from '../view/mainView.js';
 
 const routes = {
     '/board' : boardView,
@@ -14,7 +15,7 @@ const router = async () => {
     let page = routes[url];
 
     pageContainer.innerHTML = await page.render();
-    await page.addScript();
+    // await page.addScript();
 
 };
 console.log('in controller.js');
